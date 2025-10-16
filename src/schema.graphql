@@ -1,0 +1,16 @@
+type Query {
+  # It is recommended to use 'user' field instead of 'getUser'
+  getUser(id: ID!): User
+
+  # It is recommended to use 'users' field instead of 'listUsers'
+  listUsers(limit: Int): [User!]!
+}
+
+type User {
+  id: ID!
+  name: String!
+
+  # Should be Email Scalar type
+  email: String!
+  age: Int
+}

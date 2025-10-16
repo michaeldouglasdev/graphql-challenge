@@ -1,0 +1,31 @@
+{
+  "name": "graphql-interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "codegen": "graphql-codegen",
+    "test": "jest",
+    "docker:build": "docker build -t graphql-api .",
+    "docker:run": "docker run -d -p 4000:4000 --name graphql-api-container graphql-api"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.0.0",
+    "graphql": "^16.11.0",
+    "ts-node-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^6.0.0",
+    "@graphql-codegen/typescript": "^5.0.2",
+    "@graphql-codegen/typescript-resolvers": "^5.1.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.8.0",
+    "and": "^0.0.3",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
+  }
+}
