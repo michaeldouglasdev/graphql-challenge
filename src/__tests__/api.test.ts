@@ -10,7 +10,7 @@ const typeDefs = parse(
 
 const createServer = () => {
   return new ApolloServer({
-    resolvers: resolvers,
+    resolvers,
     typeDefs,
   });
 };
